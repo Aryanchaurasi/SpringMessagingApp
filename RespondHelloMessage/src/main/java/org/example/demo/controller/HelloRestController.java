@@ -18,4 +18,8 @@ public class HelloRestController {
     public String sayHelloWithPath(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+    @PostMapping("/post")
+    public String sayHelloWithPost(@RequestBody User user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+    }
 }
